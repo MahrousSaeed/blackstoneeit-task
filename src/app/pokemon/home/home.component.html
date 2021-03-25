@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="mb-15">
+          <strong> Please Enter Pokemon Id</strong>
+        </h4>
+  
+        <form #form="ngForm" role="form" autocomplete="off" (ngSubmit)="submitForm()">
+          <div class="row">
+  
+            <div class="col-12">
+              <div class="form-group" [class.error]="pokemon_id.invalid && (pokemon_id.dirty || pokemon_id.touched)">
+                <label for="complain">id </label>
+                <input class="form-control "  type="text"  [(ngModel)]="pokemonId" #pokemon_id="ngModel" 
+                  id="id" name="pokemon Id"  placeholder="enter pokemon Id" pattern="[0-9]+" required>
+                  <span class="error-label" *ngIf="pokemon_id.errors?.required">this field is required</span>
+                  <span class="error-label" *ngIf="pokemon_id.errors?.pattern">you must type a number</span>
+
+                </div>
+            </div>
+            <div class="col-12"><button class="btn btn-primary" [disabled]="form.invalid" type="submit">show details</button></div>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>

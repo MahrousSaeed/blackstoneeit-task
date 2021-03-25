@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+body{
+    background-color: #EEE;
+}
+
+.form-group {
+    label {
+        font-weight: bold;
+    }
+
+    .error-label {
+        display: none;
+        padding: 3px 10px;
+        background: #c50000;
+        color: white;
+        font-size: 13px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    &.error {
+        .error-label {
+            display: inline-block;
+        }
+
+        > label {
+            color: #c50000;
+        }
+
+        > .form-control {
+            border-color: #c50000;
+
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba(#c50000, 0.25) !important;
+            }
+        }
+
+        select-dropdown {
+            .select-container {
+                border-color: #c50000;
+            }
+        }
+    }
+}
+.details_header{
+    display: flex;
+    margin-bottom: 30px;
+    .main_title {
+        background: #eee;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 0;
+        width: calc(100% - 50px);
+    }
+}

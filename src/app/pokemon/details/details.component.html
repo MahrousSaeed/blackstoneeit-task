@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="details_header">
+                <button class="btn btn-danger" (click)="return()" > 
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                </button>
+                <h1 class="main_title">Pokemon Details</h1>
+            </div>
+            <h4 >
+                name : {{pokemonDetails?.name}}
+            </h4>
+            <div class="form-group">
+                <h4 style="display: inline-block;" for="">base experience : </h4>
+                <input class="form-control" type="text" disabled [value]="pokemonDetails?.base_experience">
+            </div>
+            <div>
+                <h4>abilities</h4>
+                <ul>
+                    <li *ngFor=" let item of pokemonDetails?.abilities" >
+                        {{item.ability?.name}}
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>stats</h4>
+                <ul>
+                    <li *ngFor=" let item of pokemonDetails?.stats" >
+                        {{item.stat?.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
